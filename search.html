@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>D-Shop</title>
+	<link rel="icon" href="/public/images/icon.png">
+	<!-- Import Boostrap css, js, font awesome here -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">       
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">    
+    <script defer src="http://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="./public/css/style.css" rel="stylesheet">
+    <!-- <script src="login.routes.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+	<script src="./controller/search.js"></script>
+	<script src="./controller/home.js"></script>
+	<script src="./controller/login.js"></script>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+	<div class="container-fluid">
+		<a class="navbar-branch" href="#">
+			<img src="./public/images/logo.png" height="50">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" 
+			data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav m-auto">
+				<li class="nav-item">
+					<a class="nav-link active" href="http://127.0.0.1:5500/index.html">ホーム</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="http://127.0.0.1:5500/skirt.html">スカート</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="http://127.0.0.1:5500/coat.html">コート</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="http://127.0.0.1:5500/pants.html">パンツ/ジーンズ</a>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+	
+	<div class="input-group rounded search" >
+		<form class = "form-search">
+			<input type="search" name="item_name"  id="search-item__input" class="input-search form-control rounded shadow-none" placeholder="キーワード検索"  />
+
+			<button class="input-group-text border-0" id="search-addon" type="submit">
+				<i class="fas fa-search"></i>
+			  </button>
+		</form>
+	
+	  </div>
+
+	<div class="navbar__login">
+		<div class="navbar__login--not">
+			<a href="http://127.0.0.1:5500/login.html">
+				<i style="color: black" class="fas fa-sign-in-alt"></i>
+			</a>
+
+		</div>
+		<div class="navbar__login--logged">
+			<i class="far fa-user-circle navbar__login--logged-icon"></i>
+            <div class="navbar__login--logged-name">
+				
+			</div>
+			 <div class="notifications" id="box"> 
+				<div class="notifications-item">
+					<a href="" class="notifications-item__link">
+						<div class="notifications-item__text">
+							会員情報
+						</div>
+					</a>
+					
+				</div>
+				<div class="notifications-item notifications-item__logout"> 
+					<a href="" class="notifications-item__link">
+						<div class="notifications-item__text">
+							 ログアウト
+						</div>
+					</a>
+				</div>
+			</div> 
+		</div>
+	</div>
+
+	<div class="navbar__cart">
+		<a href="http://127.0.0.1:5500/cart.html">
+			<i class="fas fa-shopping-cart navbar__cart-icon"></i>
+
+		</a>
+		
+	</div>
+</nav>
+<div style="margin-top: 150px" class="container-fluid con khoiSP">
+	<h2 style="color: black; display: inline">アイテムー</h2>
+
+	<div class="row search-item">
+		
+			
+	</div>
+</div>
+
+<div class="container-fluid padding">   
+    <div class="row text-center padding">
+        <div class="col-12">
+            <h2>Contact us</h2>
+        </div>
+        <div class="col-12 social padding">
+            <a href="https://www.facebook.com/ngocdiem.05102000"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</div>
+<footer>
+	<div class="container-fluid padding">	
+		<div class="row text-center">
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>H2D shop</h5>
+				<!-- <img src="./images/logo.png"> -->
+				<hr class="light">
+				<p>0977-584-677</p>
+                <p>ngocdiem5102000@gmail.com</p>
+				<p>Bach Mai street, Hanoi, Vietnam</p>
+			</div>
+			<div class="col-md-4">				
+				<hr class="light">
+				<h5>Working hours</h5>
+				<hr class="light">
+				<p>Monday-Friday: 8am - 9pm</p>
+				<p>Weekend: 7am - 10pm</p>
+			</div>
+			<div class="col-md-4">				
+				<hr class="light">
+				<h5>Services</h5>
+				<hr class="light">
+				<p>Nhượng quyền thương hiệu</p>
+				<p>Chính sách đổi/Trả</p>
+				<p>Liên hệ</p>
+			</div>
+			<div class="col-12">
+				<hr class="light-100">
+				<h5>&copy; WebPro</h5>
+			</div>
+		</div>
+	</div> 
+</footer>
+</body>
+</html>

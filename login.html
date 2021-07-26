@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ログイン</title>
+	<link rel="icon" href="/public/images/icon.png">
+	<!-- Import Boostrap css, js, font awesome here -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">       
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">    
+    <script defer src="http://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+    </script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="./public/css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+	<div class="container-fluid">
+		<a class="navbar-branch" href="http://127.0.0.1:5500/index.html#">
+			<img src="./public/images/logo.png" height="50">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" 
+			data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav m-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="http://127.0.0.1:5500/index.html#">ホーム</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="http://127.0.0.1:5500/skirt.html">スカート</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="http://127.0.0.1:5500/coat.html">コート</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="http://127.0.0.1:5500/pants.html">パンツ/ジーンズ</a>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+	<div class="input-group rounded search" style="margin-right: 20%;">
+		<input  type="search" class="input-search form-control rounded shadow-none" placeholder="キーワード検索" aria-label="Search"
+		  aria-describedby="search-addon" />
+		<span class="input-group-text border-0" id="search-addon">
+		  <i class="fas fa-search"></i>
+		</span>
+	  </div>
+
+	<!-- <div style="margin-left: 20%">
+		<a href="http://127.0.0.1:5500/login.html">
+			<i style="color: black" class="fas fa-sign-in-alt"></i>
+		</a>
+	</div>
+
+	<div style="margin: 0 2% 0 5% ">
+		<a href="http://127.0.0.1:5500/cart.html">
+			<i style="color: black" class="fas fa-shopping-cart"></i>
+
+		</a>
+		
+	</div> -->
+</nav>
+<hr>
+<hr>
+<div class="container-fluid padding">	
+	<div class="row text-center padding">
+		<div class="col-12">
+<div class="login">
+	<div class="khung">
+		<h3>ログイン</h3>
+	</div>
+	<form class="formLogin">
+	<input id="user_name" type="text" placeholder="Username" class="username" autocomplete="on">
+	<input id ="pass_word" type="password" placeholder="Password" class="password">
+	<button class="login-button">ログイン</button>
+	</form>
+	<button class="register-button">
+		<a  href="http://127.0.0.1:5500/register.html">登録</a>
+	</button>
+</div>
+<div class="container-fluid padding">	
+	<div class="row text-center padding">
+		<div class="col-12">
+			<h2>Contact us</h2>
+		</div>
+		<div class="col-12 social padding">
+			<a href="https://www.facebook.com/ngocdiem.05102000"><i class="fab fa-facebook"></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-google-plus-g"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+			<a href="#"><i class="fab fa-youtube"></i></a>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="container-fluid padding">	
+		<div class="row text-center">
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>H2D shop</h5>
+				<hr class="light">
+				<p>0977-584-677</p>
+                <p>ngocdiem5102000@gmail.com</p>
+				<p>Bach Mai street, Hanoi, Vietnam</p>
+			</div>
+			<div class="col-md-4">				
+				<hr class="light">
+				<h5>Working hours</h5>
+				<hr class="light">
+				<p>Monday-Friday: 8am - 9pm</p>
+				<p>Weekend: 7am - 10pm</p>
+			</div>
+			<div class="col-md-4">				
+				<hr class="light">
+				<h5>Services</h5>
+				<hr class="light">
+				<p>Nhượng quyền thương hiệu</p>
+				<p>Chính sách đổi/Trả</p>
+				<p>Liên hệ</p>
+			</div>
+			<div class="col-12">
+				<hr class="light-100">
+				<h5>&copy; WebPro</h5>
+			</div>
+		</div>
+	</div> 
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./controller/login.js"></script>
+</body>
+</html>
