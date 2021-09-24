@@ -19,5 +19,5 @@ const cart = sequelize.define('cart',{
     freezeTableName: true,
 }
     );
-
+    cart.hasMany(item,{foreignKey: 'fk_cartid_itemid', sourceKey:'item_id'});
     module.exports = cart;
