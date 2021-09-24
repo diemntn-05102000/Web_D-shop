@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../databases/database').sequelize;
+const Op = require('../databases/database').Op;
 const users = require('./users');
 const item = require('./item');
 const cart = sequelize.define('cart',{
@@ -19,5 +20,5 @@ const cart = sequelize.define('cart',{
     freezeTableName: true,
 }
     );
-    cart.hasMany(item,{foreignKey: 'fk_cartid_itemid', sourceKey:'item_id'});
+    
     module.exports = cart;

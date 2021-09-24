@@ -27,9 +27,7 @@ const bill = sequelize.define('bill',{
     timestamps: false,
 }
     );
-    bill.belongsTo(coupon,{foreignKey: 'fk_billid_couponid', targetKey:'coupon_id'});
-    coupon.hasMany(bill,{foreignKey: 'fk_billid_couponid', sourceKey:'coupon_id'});
-    users.hasMany(bill,{foreignKey: 'fk_billid_userid', sourceKey:'user_name'});
+    bill.hasOne(coupon,{foreignKey: 'fk_billid_userid', sourceKey:'user_name'});
 
     bill.belongsTo(users,{foreignKey: 'fk_billid_userid', targetKey:'user_name'});
     module.exports = bill;

@@ -1,6 +1,8 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../databases/database').sequelize;
 const Op = require('../databases/database').Op;
+const cart = require('./cart');
+
 const item = sequelize.define('items',{
     item_id:{
         type: Sequelize.CHAR,
@@ -33,5 +35,9 @@ const item = sequelize.define('items',{
     timestamps: false,
 }
     );
-    item.belongsToMany(user,{foreignKey: 'fk_cartid_itemid', targetKey:'item_id'});
+    item.belongsToMany(cart, {
+        through: 'items_of_cart',
+        foreignKey: 'item_id',
+        as: 'items'
+      });
     module.exports = item;
