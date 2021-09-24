@@ -33,4 +33,5 @@ const item = sequelize.define('items',{
     timestamps: false,
 }
     );
+    item.belongsToMany(user,{foreignKey: 'fk_cartid_itemid', targetKey:'item_id'});
     module.exports = item;
