@@ -9,7 +9,7 @@ $(document).ready(function() {
     $('.navbar__login--not').css('display', 'none');
     $('.navbar__login--logged').css('display', 'flex');
     $('.navbar__cart').css('display', 'block');
-    console.log(valueGetUsername);
+    // console.log(valueGetUsername);
     $('<span >'+ valueGetUsername +'</span>').appendTo('div.navbar__login--logged-name');
   } 
   $(".login-button").click(async function (e) {
@@ -28,10 +28,12 @@ $(document).ready(function() {
   
           // $('.navbar__login--not').css('display', 'none');
           // $('.navbar__login--logged').css('display', 'flex');
-          // console.log('data', user_name);
-         
-          
+         if(data.data.data.is_superuser == true){
           location.replace('/index.html');
+         }else{
+          location.replace('/itemList.html');
+         }
+          
         }
         else {
           alert("Failed password or username!!");

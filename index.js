@@ -4,19 +4,20 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const indexRouter = require('./routes/index.routes');
-const orderouter = require('./routes/orderlines.routes');
-const login = require('./routes/login.routes');
-const register = require('./routes/register.routes');
-const coat = require('./routes/coat.routes');
-const skirt = require('./routes/skirt.routes');
-const pants = require('./routes/pants.routes');
-const searchRouter = require('./routes/search.routes');
-const addCartRouter = require('./routes/add-cart.routes');
-const veiwCartRouter = require('./routes/view-cart.routes');
+const indexRouter = require('./controller/index.routes');
+const orderouter = require('./controller/orderlines.routes');
+const login = require('./controller/login.routes');
+const register = require('./controller/register.routes');
+const coat = require('./controller/coat.routes');
+const skirt = require('./controller/skirt.routes');
+const pants = require('./controller/pants.routes');
+const searchRouter = require('./controller/search.routes');
+const addCartRouter = require('./controller/add-cart.routes');
+const veiwCartRouter = require('./controller/view-cart.routes');
+const adminRouter = require('./controller/admin.routes');
 
 var cors = require('cors');
-const { search } = require('./routes/index.routes');
+const { search } = require('./controller/index.routes');
 const app = express();
 const port = 3000;
 
@@ -41,6 +42,7 @@ app.use('/register', register);
 app.use('/search', searchRouter);
 app.use('/add-cart', addCartRouter);
 app.use('/view-cart', veiwCartRouter);
+app.use('/admin', adminRouter);
 
 app.use('/', indexRouter);
 
