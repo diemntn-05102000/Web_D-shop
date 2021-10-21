@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../databases/database').sequelize;
 const Op = require('../databases/database').Op;
+const bill = require('./bills');
 const users = sequelize.define('users',{
     // user_id:{
     //     type: Sequelize.CHAR,
@@ -43,9 +44,15 @@ const users = sequelize.define('users',{
     },
     is_staff:{
         type: Sequelize.BOOLEAN
-    }
+    },
+    gender:{
+        type: Sequelize.CHAR
+    },
 },{
     timestamps: false,
 }
     );
+    bill.belongsTo(users,{foreignKey: 'user_name', targetKey:'user_name'});
+    users.hasMany(bill, {foreignKey: 'user_name', targetKey:'user_name'});
+
     module.exports = users;

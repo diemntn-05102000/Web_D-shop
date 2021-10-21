@@ -50,15 +50,8 @@
 	</div>
 	
 	<div class="input-group rounded search" >
-		<form class = "form-search">
-			<input type="search" name="item_name"  id="search-item__input" class="input-search form-control rounded shadow-none" placeholder="キーワード検索"  />
-
-			<button class="input-group-text border-0" id="search-addon" type="submit">
-				<i class="fas fa-search"></i>
-			  </button>
-		</form>
-	
-	  </div>
+		
+	</div>
 
 	<div class="navbar__login">
 		<div class="navbar__login--not">
@@ -99,18 +92,18 @@
     <br>
       <div style="margin: 10px 10px 10px 80%">
         <select id="#empid" class="selectpicker" multiple title="Add filter" >
-			<option value="item_name">Item</option>
-			<option value="theme">Theme</option>
-            <option value="quantity">Quantity</option>
-			<option value="brand">Brand</option>
-			<option value="sold">Sold</option>
+			<option value="item_name">製品名</option>
+			<option value="theme">テーマ</option>
+			<option value="brand">ブランド</option>           
+			 <option value="quantity">在庫品</option>
+			<option value="sold">販売数量</option>
           </select>
       </div>
 	  <div class="filter-itemname">
 		
 	  </div>
 	  <div class="button-apply">
-		<button type="button" class="btn btn-secondary" style="margin: 10px 0">Apply</button>
+		<button type="button" class="btn btn-secondary btn-apply" style="margin: 10px 0">Apply</button>
 	  </div>
 
       
@@ -118,14 +111,14 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Image</th>
-                <th>Item</th>
-                <th>Theme</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Brand</th>
-                <th>Sold</th>
-                <th>Action</th>
+                <th>画像</th>
+                <th>製品名</th>
+                <th>テーマ</th>
+				<th>ブランド</th>
+                <th>価格</th>
+                <th>在庫品</th>
+                <th>販売数量</th>
+                <th>アクション</th>
 
             </tr>
            

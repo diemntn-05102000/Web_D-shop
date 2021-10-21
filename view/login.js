@@ -31,6 +31,8 @@ $(document).ready(function() {
          if(data.data.data.is_superuser == true){
           location.replace('/index.html');
          }else{
+          localStorage.setItem('sold', 'desc');
+          localStorage.setItem('bought', 'desc');
           location.replace('/itemList.html');
          }
           
@@ -48,7 +50,8 @@ $(document).ready(function() {
     e.preventDefault();
     localStorage.removeItem("login");
     localStorage.removeItem("username");
-    
+    localStorage.removeItem("gender");
+    location.replace('/index.html');
     $('.navbar__login--not').css('display', 'block');
     $('.navbar__login--logged').css('display', 'none');
     $('.navbar__cart').css('display', 'none');

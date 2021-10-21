@@ -4,7 +4,7 @@ const Op = require('../databases/database').Op;
 const coupon = require('./coupon');
 const users = require('./users');
 
-const bill = sequelize.define('bill',{
+const bills = sequelize.define('bills',{
     bill_id:{
         type: Sequelize.CHAR,
         primaryKey: true
@@ -27,7 +27,8 @@ const bill = sequelize.define('bill',{
     timestamps: false,
 }
     );
-    bill.hasOne(coupon,{foreignKey: 'fk_billid_userid', sourceKey:'user_name'});
+    bills.hasOne(coupon,{foreignKey: 'fk_billid_userid', sourceKey:'user_name'});
 
-    bill.belongsTo(users,{foreignKey: 'fk_billid_userid', targetKey:'user_name'});
-    module.exports = bill;
+    
+    // https://youtu.be/t_cedTldfjs?t=2269
+    module.exports = bills;

@@ -50,15 +50,8 @@
 	</div>
 	
 	<div class="input-group rounded search" >
-		<form class = "form-search">
-			<input type="search" name="item_name"  id="search-item__input" class="input-search form-control rounded shadow-none" placeholder="キーワード検索"  />
-
-			<button class="input-group-text border-0" id="search-addon" type="submit">
-				<i class="fas fa-search"></i>
-			  </button>
-		</form>
-	
-	  </div>
+		
+	</div>
 
 	<div class="navbar__login">
 		<div class="navbar__login--not">
@@ -99,27 +92,30 @@
     <br>
       <div style="margin: 10px 10px 10px 80%">
         <select id="#empid" class="selectpicker" multiple title="Add filter" >
-			<option value="date-birth">Age</option>
-			<option value="gender">Gender</option>
+			<option value="age">年齢</option>
+			<option value="gender">性別</option>
+			<option value="bought">購入した製品数</option>
           </select>
       </div>
-	  <div class="filter-itemname">
+	  <div class="filter-user">
 		
 	  </div>
 	  <div class="button-apply">
-		<button type="button" class="btn btn-secondary" style="margin: 10px 0">Apply</button>
+		<button type="button" class="btn btn-secondary btn-apply" style="margin: 10px 0">Apply</button>
 	  </div>
 
       <table id="example" class="table table-bordered" style="width:100%">
         <thead>
             <tr>
-                <th>Username</th>
-                <th>Birthday</th>
-                <th>Provice</th>
-                <th>District</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Action</th>
+                <th>ユーザー名</th>
+                <th>生年月日</th>
+				<th>性別</th>
+                <th>県</th>
+                <th>群</th>
+                <th>メール</th>
+                <th>電話番号</th>
+                <th>購入した製品数</th>
+                <!-- <th>Action</th> -->
 
             </tr>
            
